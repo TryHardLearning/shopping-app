@@ -124,9 +124,8 @@ const SingleProduct = () => {
     <>
         <header>
             <Navbar/>
-            <Announcement/>
         </header>
-        <main>
+        <section className='main'>
             <Container>
                 <Wrapper>
                     <ImgContainer>
@@ -163,7 +162,7 @@ const SingleProduct = () => {
                     </InfoContainer>
                 </Wrapper>
             </Container>
-        </main>
+        </section>
         <footer>
             <Newsletter/>
             <Footer/>

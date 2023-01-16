@@ -1,0 +1,37 @@
+
+.newsletter{
+    height: 50vh;
+    background-color: #fcf5f5;
+}
+
+.newsletter .title{
+    font-size: 60px;
+}
+.newsletter .description{
+    font-size: 22px;
+}
+.newsletter .input-container {
+    width: 50%;
+    height: 40px;   
+    border: 1px solid #d0d0d0;
+}
+
+.newsletter .input{
+    border: none;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 2px 15px;
+    flex: 8;
+}
+.newsletter .btn-styled{
+    flex: 1;
+    border: 1px solid #ff00ee;
+    background-color: #fff;
+    color: #ff00ee;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+.newsletter .btn-styled:hover{
+      background-color: #ff00ee;
+      color: #fff;
+}

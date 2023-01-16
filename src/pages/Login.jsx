@@ -1,9 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Footer } from '../components'
+import Navebar from '../components/Navebar'
 
 const Container = styled.div`
-    width: 100vw;
-    height: 100vh;
+    max-width: 100vw;
+    height: calc(100vh - 90px);
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.3)), url('https://images.pexels.com/photos/7610408/pexels-photo-7610408.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -66,22 +68,32 @@ const NavLinks = styled.div`
   flex-direction: column;
 `
 const Login = () => {
-  return (
-    <Container>
-        <Wrapper>
-            <Title>Sing In</Title>
-            <Form>
-                <Input placeholder ="Email"/>
-                <Input placeholder ="Password"/>
-            </Form>
-            <Button>Login</Button>
-            <NavLinks>
-                <Link href='#'>Don't remember the password?</Link>
-                <Link href='#'>Create a new Account</Link>
-            </NavLinks>
-          </Wrapper>
-    </Container>
-  )
+    return (
+        <>
+            <header>
+                <Navebar />
+            </header>
+            <section className="main">
+                <Container>
+                    <Wrapper>
+                        <Title>Sing In</Title>
+                        <Form>
+                            <Input placeholder="Email" type='text' />
+                            <Input placeholder="Password" type='password' />
+                        </Form>
+                        <Button>Login</Button>
+                        <NavLinks>
+                            <Link href='#'>Don't remember the password?</Link>
+                            <Link href='#'>Create a new Account</Link>
+                        </NavLinks>
+                    </Wrapper>
+                </Container>
+            </section>
+            <footer>
+                <Footer />
+            </footer>
+        </>
+    )
 }
 
 export default Login

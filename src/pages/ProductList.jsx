@@ -13,6 +13,7 @@ const FilterContainer = styled.div`
 ` 
 const Title = styled.h1`
     margin: 1.25rem;
+    font-size: 1.75rem;
 `
 const Filter = styled.div`
     margin: 1.25rem;
@@ -35,10 +36,9 @@ const ProductList = () => {
     <>
         <header>
             <Navbar/>
-            <Announcement/>
         </header>
-        <main>
-            <Container>
+        <section className='main'>
+            <Container style={{marginTop: '30px'}}>
                 <Title>Dresses</Title>
                 <FilterContainer>
                     <Filter>
@@ -76,7 +76,7 @@ const ProductList = () => {
                 </FilterContainer>
                 <Products/>
             </Container>
-        </main>
+        </section>
         <footer>
             <Newsletter/>
             <Footer/>

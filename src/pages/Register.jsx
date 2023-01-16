@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Footer, Navbar } from '../components'
 
 const Container = styled.div`
-    width: 100vw;
-    height: 100vh;
+    max-width: 100vw;
+    height: calc(100vh - 90px);
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.3)), url('https://images.pexels.com/photos/7610408/pexels-photo-7610408.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -55,23 +56,33 @@ const Input = styled.input`
 
 `
 const Register = () => {
-  return (
-    <Container>
-        <Wrapper>
-            <Title>Register Now</Title>
-            <Form>
-                <Input placeholder ="Name"/>
-                <Input placeholder ="Last Name"/>
-                <Input placeholder ="Username"/>
-                <Input placeholder ="Email"/>
-                <Input placeholder ="Password"/>
-                <Input placeholder ="Confirm Password"/>
-                <Agreemnt>By creating an account, I consent to the processing of my personal data in accordance with the <b> PRIVACY POLICY </b></Agreemnt>
-            </Form>
-            <Button>Create</Button>
-        </Wrapper>
-    </Container>
-  )
+    return (
+        <>
+            <header>
+                <Navbar />
+            </header>
+            <section className='main'>
+                <Container>
+                    <Wrapper>
+                        <Title>Register Now</Title>
+                        <Form>
+                            <Input placeholder="Name" type='text' />
+                            <Input placeholder="Last Name" type='text' />
+                            <Input placeholder="Username" type='text'/>
+                            <Input placeholder="Email" type='email'/>
+                            <Input placeholder="Password" type='password' />
+                            <Input placeholder="Confirm Password" type='password' />
+                            <Agreemnt>By creating an account, I consent to the processing of my personal data in accordance with the <b> PRIVACY POLICY </b></Agreemnt>
+                        </Form>
+                        <Button>Create</Button>
+                    </Wrapper>
+                </Container>
+            </section>
+            <footer>
+                <Footer />
+            </footer>
+        </>
+    )
 }
 
 export default Register

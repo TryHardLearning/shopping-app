@@ -1,0 +1,8 @@
+.announcement{
+    height: 30px;
+    background-color: #ee00dd; 
+    font-size: 14px;
+    position: fixed;
+    top: 0px;
+    z-index: 1000000;
+}

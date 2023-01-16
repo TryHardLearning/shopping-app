@@ -1,65 +1,19 @@
 import React from 'react'
 import { Send } from '@material-ui/icons'
-import styled from 'styled-components'
-
-const Container = styled.div`
-    height: 50vh;
-    background-color: #fcf5f5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-`
-const Title = styled.h1`
-    font-size: 60px;
-    font-weight: 500;
-    margin-bottom: 20px;
-`
-const Description = styled.div`
-    font-size: 25px;
-    font-weight: 300;
-    margin-bottom: 20px;
-`
-const InputContainer = styled.div`
-    width: 50%;
-    height: 40px;
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
-    border: 1px solid #d0d0d0;
-    
-`
-const Input = styled.input`
-    border: none;
-    font-size: 15px;
-    font-weight: 400;
-    padding: 2px 15px;
-    flex: 8;
-`
-const Button = styled.button`
-    flex: 1;
-    border: 1px solid #ff00ee;
-    background-color: #fff;
-    color: #ff00ee;
-    cursor: pointer;
-    transition: all 1s ease;
-    &:hover{
-      background-color: #ff00ee;
-      color: #fff;
-    }
-`
+import { Container } from 'react-bootstrap'
+import './css/Newsletter.css'
 
 const Newsletter = () => {
   return (
-    <Container>
-        <Title>Newsletter</Title>
-        <Description>Get timely updates from your favorite products!</Description>
-        <InputContainer>
-            <Input placeholder='Your email'/>
-            <Button>
+    <Container fluid className='newsletter d-flex justify-content-center align-items-center flex-column'>
+        <h1 className='title fw-500 mb-2'>Newsletter</h1>
+        <h3 className='description fw-300 mb-2'>Get timely updates from your favorite products!</h3>
+        <div className='input-container d-flex justify-content-center bg-white'>
+            <input className='input ' type='email' placeholder='Your email'/>
+            <button className='btn-styled'>
                 <Send/>
-            </Button>
-        </InputContainer>
+            </button>
+        </div>
     </Container>
   )
 }

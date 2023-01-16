@@ -1,0 +1,44 @@
+.Cart .top-text {
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.Cart .info {
+    flex: 3;
+}
+
+.Cart .product-detail {
+    flex: 2;
+}
+
+.Cart .price-detail {
+    flex: 1;
+}
+
+.Cart .img {
+    width: 200px;
+    border-radius: 8px 2px;
+}
+
+.Cart .product-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.Cart .product-amount {
+    font-size: 1.5rem;
+    margin: 5px;
+}
+
+.Cart .product-price {
+    font-size: 1.8rem;
+    font-weight: 200;
+}
+
+.Cart hr {
+    background-color: #eee;
+    border: none;
+    height: 2px;
+    margin: 15px 0;
+}

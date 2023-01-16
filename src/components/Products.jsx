@@ -1,19 +1,12 @@
 import React from 'react'
-import styled from 'styled-components'
+import { Container } from 'react-bootstrap'
 import Product from './Product'
 
 import {popularProducts} from '../data'
 
-const Container =styled.div`
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    background: #f5fafd;
-`
 const Products = () => {
   return (
-    <Container>
+    <Container fluid className='products p-2 d-flex justify-content-between flex-wrap' style={{background: '#f5fafd'}}>
         {popularProducts.map((item) =>(
             <Product key={item.id} item={item}/>
         ))}

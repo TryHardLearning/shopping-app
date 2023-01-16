@@ -1,107 +1,42 @@
 import React from 'react'
-import styled from 'styled-components'
-import {Search, ShoppingCartOutlined , FavoriteBorderOutlined} from '@material-ui/icons'
+import {Search, ShoppingCartOutlined , FavoriteBorderOutlined, BorderAll} from '@material-ui/icons'
 import {Badge} from '@material-ui/core'
+import { Container } from 'react-bootstrap'
+import './css/Navebar.css'
+import Announcement from './Announcement'
 
-const Container = styled.div`
-  height: 60px;
-  z-index: 10000;
-  @media only screen and (max-width: 380px){
-      
-  }
-`
-const Wrapper = styled.div`
-  height: 100%;
-  padding: 10px 25px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  @media only screen and (max-width: 380px){
-
-  }
-`
-const Left = styled.div`
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-`
-const Center = styled.div`
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`
-const Right = styled.div`
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-`
-const HeartBit = styled.span`
-  font-size: 14px;
-  color: #000;
-  cursor: pointer;
-  transition: all 1s ease;
-  &:hover{
-    color: #ff00ee;
-  }
-`
-const SearchContainer = styled.div`
-  display: flex;
-  align-items: center;
-  border: 1px solid lightgray;
-  margin: 25px;
-  @media only screen and (max-width: 420px){
-    margin: auto 10px;
-    
-  }
-`
-const Input = styled.input`
-  border: none;
-  padding: 4px;
-
-`
-const Logo = styled.a`
-  font-weight: bold;
-  text-align: center;
-  font-size: 32px;
-  text-decoration: none;
-  color: #000;
-`
-const MenuItem = styled.div`
-  font-size: 14px;
-  cursor: pointer;
-  margin-left: 25px;
-`
 const Navebar = () => {
   return (
-    <Container>
-      <Wrapper>
-          <Left>
-              <HeartBit>
+    <>
+      <Announcement/>
+      <Container fluid className='navebar ps-4 pe-4' style={{height: '60px'}}>
+      <div className='wrapper h-100 w-100 d-flex justify-content-space-between align-items-center'>
+          <div className='left d-flex align-items-center justify-content-flex-start h-100' style={{flex:  '1'}}>
+              <span className='HeartBit link'>
                 <FavoriteBorderOutlined/>
-              </HeartBit>
-              <SearchContainer>
-                <Input/>
+              </span>
+              <div className='SearchContainer d-flex align-items-center m-2'>
+                <input type='search' className='input'/>
                 <Search style={{color: "#444", fontSize: 16}}/>
-              </SearchContainer>
-          </Left>
-          <Center>
-              <Logo href='/'>WayCycles</Logo>
-          </Center>
-          <Right>
-              <MenuItem>Register</MenuItem>
-              <MenuItem>Sing In</MenuItem>
-              <MenuItem>
-                <Badge badgeContent={4} color='primary'>
-                  <ShoppingCartOutlined/>
+              </div>
+          </div>
+          <div className='Center d-flex justify-content-center align-items-center h-100' style={{flex:  '1'}}>
+              <a href='#' className='logo fw-500 text-center text-bg-black'>WayCycles</a>
+          </div>
+          <div className='Right d-flex justify-content-end align-items-center h-100' style={{flex:  '1'}}>
+              <div className='MenuItem ms-2 me-2'><a href='#' className='link'>Register</a></div>
+              <div className='MenuItem ms-2 me-2'><a href='#' className='link'>Sing In</a></div>
+              <div className='MenuItem ms-2 me-2'>
+                <Badge badgeContent={4} color='error'>
+                  <a href='#' className='link'><ShoppingCartOutlined/></a>
                 </Badge>
-              </MenuItem>
+              </div>
               
-          </Right>
-      </Wrapper>
+          </div>
+      </div>
     </Container>
+    </>
+    
   )
 }
 

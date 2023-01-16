@@ -1,20 +1,11 @@
 import React from 'react'
-import styled from 'styled-components'
+import {Container} from 'react-bootstrap';
+import './css/Announcement.css'
 
-const Container = styled.div`
-  height: 30px;
-  background-color: #ee00dd;
-  color: #fff;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  font-weight: 500;
-`
 
 const Announcement = () => {
   return (
-    <Container>
+    <Container fluid className='announcement text-white d-flex align-items-center justify-content-center fw-500'>
         Super Deal! Free Shipping on Orders Over $50
     </Container>
   )

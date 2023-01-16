@@ -1,19 +1,15 @@
 import React from 'react'
-import styled  from 'styled-components'
 import {categories} from '../data'
 import CategoryItem from './CategoryItem'
+import { Container, Row } from 'react-bootstrap'
 
-const Container = styled.div`
-  display: flex;
-  padding: 20px;
-  justify-content: space-between;
-`
+
 const Categories = () => {
   return (
-    <Container>
-        {categories.map((item)=>(
-             <CategoryItem key={item.id} item={item}/>
-        ))}
+    <Container fluid className='Categories d-flex justify-content-space-between ps-4 pe-4'> 
+      {categories.map((item)=>(
+         <CategoryItem key={item.id} item={item}/>
+      ))}
     </Container>
   )
 }

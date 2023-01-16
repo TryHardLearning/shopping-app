@@ -6,15 +6,15 @@ import { Navbar, Announcement, Slider, Categories, Products, Newsletter, Footer}
 const Home = () => {
   return (
     <>
-        <header>
-            <Announcement/>
-            <Navbar/> 
+        <header className='d-flex'> 
+          <Navbar/>
+          <Announcement/>
         </header>
-        <main>
+        <section className='main'>
             <Slider/>
             <Categories/>
             <Products/>
-        </main>
+        </section>
         <footer>
             <Newsletter/>
             <Footer/>

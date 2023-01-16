@@ -1,0 +1,13 @@
+.ButtonStyled {
+    padding: 5px;
+    cursor: pointer;
+    color: #ff00ee;
+    border: 1px solid #ff00ee;
+    background: transparent;
+    transition: all 0.7s ease;
+}
+
+.ButtonStyled:hover {
+    color: #fff;
+    background-color: #ff00ee;
+}
