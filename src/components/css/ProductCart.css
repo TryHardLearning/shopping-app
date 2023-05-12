@@ -1,3 +1,12 @@
+.productSee{
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: all 0.7s ease;
+}
+.productSee:hover{
+    border: 1px solid #ff00ee;
+}
 .Cart .top-text {
     cursor: pointer;
     margin: 0 10px;
@@ -29,11 +38,15 @@
 .Cart .product-amount {
     font-size: 1.5rem;
     margin: 5px;
+    padding: 5px 8px;
+    border-radius: 8px;
+    border: 1px groove #000;
 }
 
 .Cart .product-price {
     font-size: 1.8rem;
-    font-weight: 200;
+    font-weight: 300;
+   
 }
 
 .Cart hr {

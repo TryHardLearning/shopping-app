@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import './css/Cart.css'
 import { Navbar, Footer, ButtonStyled, ButtonLarge, ProductCart} from '../components'
 /*
 const Summary = styled.div`
@@ -38,24 +39,27 @@ const Cart = () => {
                 <div className='botton d-flex justify-content-between'>
                   <div className='info'>
                      <ProductCart/>
+                     <ProductCart/>
+                     <ProductCart/>
+                     <ProductCart/>
                   </div>
-                  <div className='summary p-2' >
-                      <h1 className='title' SummaryTitle>Order Summary</h1>
+                  <div className='summary p-2 ms-2 d-flex justify-content-between flex-column' >
+                      <h1 className='title'>Order Summary</h1>
                       <div className='summary-item d-flex justify-content-between' >
-                        <span className='summaryItemText fw-light'>Subtotal</span>
+                        <span className='summaryItemText fw-400'>Subtotal</span>
                         <span className='summaryItemPrice' >$ 80</span>
                       </div>
                       <div className='summary-item d-flex justify-content-between' >
-                        <span className='summaryItemText fw-light'>Estimated Shipping</span>
+                        <span className='summaryItemText fw-400'>Estimated Shipping</span>
                         <span className='summaryItemPrice'>$ 50</span>
                       </div>
                       <div className='summary-item d-flex justify-content-between' >
-                        <span className='summaryItemText fw-light'>Shipping Discount</span>
+                        <span className='summaryItemText fw-400'>Shipping Discount</span>
                         <span className='summaryItemPrice'>$ -50</span>
                       </div>
                       <div className='summary-item d-flex justify-content-between'  type="total">
-                        <span className='summaryItemText fw-500 total'>Total</span>
-                        <span className='summaryItemPrice total'>$ 80</span>
+                        <span className='summaryItemText fw-700 total'>Total</span>
+                        <span className='summaryItemPrice fw-700 total'>$ 80</span>
                       </div>
                       <ButtonLarge text='Checkout Now'/>
                   </div>

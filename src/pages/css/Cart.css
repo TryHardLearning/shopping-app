@@ -1,0 +1,8 @@
+.summary{
+    border: 1px groove #ff00ee;
+    border-radius: 8px;
+    height: 51vh;
+}
+.summary span{
+    font-size: 1.1rem;
+}
