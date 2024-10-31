@@ -29,7 +29,7 @@ const Slider = () => {
             </div>
             <div className='info-container h-100 ps-4 d-flex flex-column justify-content-center align-items-start'>
               <h1 style={{color: `${item.color}`}}>{item.title}</h1>
-              <di className='description fw-500 mt-4 mb-4'>{item.desc}</di>
+              <div className='description fw-500 mt-4 mb-4'>{item.desc}</div>
               <ButtonDefault className='btn' text='Show Now' color={item.color}/>
             </div>
           </div>

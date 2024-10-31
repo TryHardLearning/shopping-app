@@ -12,7 +12,7 @@ const more = () => {
 const ProductCart = () => {
     return (
         <>
-            <div class='productSee mb-1'>
+            <div className='productSee mb-1'>
                 <div className='product-detail d-flex'>
                     <img className='img' src="https://i.pinimg.com/564x/a6/51/02/a651026986996bb1b607d4487c5a5336.jpg" />
                     <div className='details ps-2 d-flex justify-content-around flex-column'>
